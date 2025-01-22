@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLACÉ | About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@200;300;400;500;600&family=Cormorant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .font-italiana { font-family: 'Italiana', serif; }
+        .font-cormorant { font-family: 'Cormorant', serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+
+        .gradient-overlay {
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+        }
+
+        .hover-scale {
+             transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+         }
+
+         .hover-scale:hover {
+            transform: scale(1.03);
+         }
+
+        .custom-scroll::-webkit-scrollbar {
+             width: 4px;
+         }
+
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        .button-primary {
+             background-color: black;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+         }
+
+        .button-primary:hover{
+            background-color: #4a4a4a;
+        }
+    </style>
+</head>
+<body class="bg-[#FDFBF9] custom-scroll">
+    <!-- Announcement Bar -->
+    <div class="bg-black text-white py-2 text-center font-montserrat text-xs tracking-wider">
+        Free shipping on orders over $75 | Complimentary samples with every order
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-12">
+                    <a href="/" class="text-3xl font-italiana tracking-wider">GLACÉ</a>
+                    <div class="hidden lg:flex items-center space-x-8 font-montserrat text-xs tracking-wider">
+                        <div class="hidden lg:flex items-center space-x-8 font-montserrat text-xs tracking-wider">
+                            <a href="products.html?type=all" class="text-gray-700 hover:text-black transition-colors duration-300">SHOP</a>
+                            <a href="products.html?type=new" class="text-gray-700 hover:text-black transition-colors duration-300">NEW</a>
+                            <a href="products.html?type=bestsellers" class="text-gray-700 hover:text-black transition-colors duration-300">BESTSELLERS</a>
+                            <a href="collections.html" class="text-gray-700 hover:text-black transition-colors duration-300">COLLECTIONS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="products.html" class="text-gray-700 hover:text-black transition-colors duration-300">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="profile.html" class="text-gray-700 hover:text-black transition-colors duration-300">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-black transition-colors duration-300">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 h-full z-50 right-0">
+            <div class="flex flex-col items-end h-full">
+                <button id="close-mobile-menu" class="absolute top-6 right-6 text-gray-700">
+                    <i class="fas fa-times fa-2x"></i>
+                </button>
+                <div class="w-full flex flex-col items-end px-6 py-12 space-y-4 bg-white">
+                    <a href="products.html?type=all" class="mt-2 block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">SHOP</a>
+                    <a href="products.html?type=new" class="block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">NEW</a>
+                    <a href="products.html?type=bestsellers" class="block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">BESTSELLERS</a>
+                    <a href="collections.html" class="block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">COLLECTIONS</a>
+                    <a href="profile.html" class="block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">PROFILE</a>
+                    <a href="cart.html" class="block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">CART</a>
+                </div>
+            </div>
+        </div>
+    </nav>    
+
+    <!-- About Us Content -->
+    <section class="py-24 px-6 max-w-7xl mx-auto mt-20">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="font-italiana text-5xl mb-8">Our Story</h2>
+            <p class="font-montserrat text-gray-600 text-sm tracking-wide">The journey of GLACÉ</p>
+        </div>
+
+        <!-- Company History -->
+        <div class="mb-24" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <h3 class="font-cormorant text-3xl mb-8">Company History</h3>
+                    <p class="font-montserrat text-gray-700 leading-relaxed mb-8">
+                        GLACÉ was founded in 2025 by Jacelyn Esperas, a visionary makeup artist passionate about creating luxurious and sustainable beauty. With a strong desire to redefine industry standards, we have grown from a small business to a thriving business dedicated to the beauty industry and the health of our planet. We believe that true beauty makes people and the world better.
+                    </p>
+                </div>
+        
+                <div class="md:w-1/2">
+                    <img src="assets/media/building.jpg" alt="Company History Image" class="w-full rounded-md shadow-lg hover-scale">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="mb-24" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <img src="assets/media/Mission & Vision Image.jpg" alt="Mission & Vision Image" class="w-full rounded-md shadow-lg hover-scale">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="font-cormorant text-3xl mb-8">Our Mission & Vision</h3>
+                    <p class="font-montserrat text-gray-700 leading-relaxed mb-8">
+                        We aim to embrace beauty through the transformative power of makeup, honor each individuals unique sensibility, and help them express their true selves. We believe beauty products should be high quality, ethical, and sustainable — and consistent with this belief, we want to inspire a community of confident, empowered individuals who share our passion for beauty. Beauty for us is an experience and we try to convey that experience in every product we produce.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="font-cormorant text-3xl mb-12">Our Core Values</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="text-center" data-aos="fade-up">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#F4F1ED] flex items-center justify-center">
+                    <i class="fas fa-check-circle fa-2x"></i>
+                </div>
+                <h3 class="font-cormorant text-xl mb-4">Quality</h3>
+                <p class="font-montserrat text-sm text-gray-600 leading-relaxed">
+                        We are committed to providing products of the highest quality.
+                </p>
+            </div>
+
+            <div class="text-center" data-aos="fade-up">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#F4F1ED] flex items-center justify-center">
+                    <i class="fas fa-balance-scale fa-2x"></i>
+                </div>
+                <h3 class="font-cormorant text-xl mb-4">Ethics</h3>
+                <p class="font-montserrat text-sm text-gray-600 leading-relaxed">
+                    We believe in treating people and the environment with respect.
+                </p>
+            </div>
+        
+            <div class="text-center" data-aos="fade-up">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#F4F1ED] flex items-center justify-center">
+                    <i class="fas fa-leaf fa-2x"></i>
+                </div>
+                    <h3 class="font-cormorant text-xl mb-4">Sustainability</h3>
+                    <p class="font-montserrat text-sm text-gray-600 leading-relaxed">
+                        We strive to minimize our ecological footprint.
+                </p>
+            </div>
+
+            <div class="text-center" data-aos="fade-up">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#F4F1ED] flex items-center justify-center">
+                    <i class="fas fa-users fa-2x"></i>
+                </div>
+                    <h3 class="font-cormorant text-xl mb-4">Community</h3>
+                    <p class="font-montserrat text-sm text-gray-600 leading-relaxed">
+                        We foster a community of beauty enthusiasts.
+                    </p>
+            </div>
+        
+            <div class="text-center mb-8" data-aos="fade-up">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#F4F1ED] flex items-center justify-center">
+                    <i class="fas fa-lightbulb fa-2x"></i>
+                </div>
+                <h3 class="font-cormorant text-xl mb-4">Innovation</h3>
+                <p class="font-montserrat text-sm text-gray-600 leading-relaxed">
+                        We are constantly seeking to improve our range.
+                    </p>
+            </div>
+        </div>
+
+        <!-- Team/Founder Profiles -->
+        <div class="mt-4 mb-24" data-aos="fade-up">
+            <h3 class="font-cormorant text-3xl mb-12 text-center">Meet Our Team</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+                <div class="text-center">
+                    <img src="assets/media/Jessaline Esperas.jpg" alt="Jessaline Esperas" class="size-20 rounded-full mx-auto mb-6 object-cover shadow-md hover-scale object-center">
+                    <h4 class="font-cormorant text-xl mb-2">Jessaline Esperas</h4>
+                    <p class="font-montserrat text-gray-600 text-sm">Founder</p>
+                </div>
+
+                <div class="text-center">
+                    <img src="assets/media/Kate Estipona.jpg" alt="Kate Estipona" class="size-20 rounded-full mx-auto mb-6 object-cover shadow-md hover-scale object-center">
+                    <h4 class="font-cormorant text-xl mb-2">Katie Estipona</h4>
+                    <p class="font-montserrat text-gray-600 text-sm">Creative Director</p>
+                </div>
+                
+                <div class="text-center">
+                    <img src="assets/media/Jhon Arvin Garcia.jpg" alt="Jhon Arvin Garcia" class="size-20 rounded-full mx-auto mb-6 object-cover shadow-md hover-scale object-center">
+                    <h4 class="font-cormorant text-xl mb-2">Jhon Arvin Garcia</h4>
+                        <p class="font-montserrat text-gray-600 text-sm">Marketing and Branding Lead</p>
+                </div>
+
+                <div class="text-center">
+                        <img src="assets/media/Mark Angelo Salvador.jpg" alt="Mark Angelo Salvador" class="size-20 rounded-full mx-auto mb-6 object-cover shadow-md hover-scale object-center">
+                    <h4 class="font-cormorant text-xl mb-2">Mark Angelo Salvador</h4>
+                        <p class="font-montserrat text-gray-600 text-sm">Operations Coordinator</p>
+                </div>
+
+                <div class="text-center">
+                    <img src="assets/media/Reyna Gem Gasic.jpg" alt="Reyna Gem Gasic" class="size-20 rounded-full mx-auto mb-6 object-cover shadow-md hover-scale object-center">
+                    <h4 class="font-cormorant text-xl mb-2">Reyna Gem Gasic</h4>
+                        <p class="font-montserrat text-gray-600 text-sm">Product Specialist</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Our Approach -->
+        <div class="mb-24" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <h3 class="font-cormorant text-3xl mb-8">Our Process</h3>
+                    <p class="font-montserrat text-gray-700 leading-relaxed mb-8">
+                        Each of our creation is the result of a deep understanding of what our clients' needs. From concept to the final product, we combine centuries-old technology with innovative approaches. Every ingredient is uniquely curated to not just achieve the best-quality results, but to create a pleasurable process that feels just as good as it looks. We are committed to creating not just makeup, but splendid moments that is both empowering and delighting.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="assets/media/Our Approach.jpg" alt="Our Process Image" class="w-full rounded-md shadow-lg hover-scale">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Brand Commithment -->
+        <div class="mb-24" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <img src="assets/media/Brand Ethos.jpg" alt="Brand Ethos Image" class="w-full rounded-md shadow-lg hover-scale">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="font-cormorant text-3xl mb-8">Our Brand Commitment</h3>
+                    <p class="font-montserrat text-gray-700 leading-relaxed mb-8">
+                        Our commitment to sustainability is invaluable, from the ingredients that are responsibly sourced to our recyclable packaging. We are vehemently anti-animal testing, and we ensure complete transparency so you will know exactly the content in every single product on your vanity. We celebrate diversity and strive to create a brand where everyone feels included as part of our conscious community committed to envisioning the world as a more beautiful place.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" data-aos="fade-up">
+            <a href="products.html" class="button-primary">Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="font-italiana text-2xl mb-6">GLACÉ</h3>
+                <p class="font-montserrat text-sm text-gray-400">
+                    Luxury beauty for the modern woman
+                </p>
+            </div>
+            <!-- Quick Links Column -->
+            <div>
+                <h4 class="font-montserrat font-bold text-lg mb-4">Quick Links</h4>
+                <ul class="font-montserrat text-sm text-gray-400 space-y-2">
+                    <li><a href="products.html" class="hover:text-white">Shop</a></li>
+                    <li><a href="about-us.html" class="hover:text-white">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Customer Care Column -->
+            <div>
+                <h4 class="font-montserrat font-bold text-lg mb-4">Customer Care</h4>
+                <ul class="font-montserrat text-sm text-gray-400 space-y-2">
+                    <li><a href="shipping-returns.html" class="hover:text-white">Shipping & Returns</a></li>
+                    <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="tos.html" class="hover:text-white">Terms of Service</a></li>
+                </ul>
+            </div>
+            <!-- Stay Connected Column -->
+            <div>
+                <h4 class="font-montserrat font-bold text-lg mb-4">Stay Connected</h4>
+                <p class="font-montserrat text-sm text-gray-400 mb-4">
+                    Sign up for exclusive offers and the latest beauty news
+                </p>
+                <div class="flex flex-col space-y-4 mb-4">
+                    <input type="email" placeholder="Your email" class="bg-gray-800 text-white p-2 rounded focus:outline-none focus:ring focus:border-white focus:ring-opacity-50">
+                    <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-100">Subscribe</button>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-gray-800">
+            <p class="font-montserrat text-xs text-gray-400 text-center">
+                © 2025 GLACÉ. All rights reserved.
+                <br>
+                Disclaimer:
+                This website is for educational purposes only. GLACÉ is a fictitious business. This means that all product names, descriptions and images used on this website are fictitious or adapted from external sources for simulated business situations. All images and content not created by the team remain the property of their respective owners.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const announcementBar = document.querySelector(".bg-black.text-white.py-2");
+            const navBar = document.querySelector("nav");
+
+            const updateNavPosition = () => {
+                const announcementBarHeight = announcementBar ? announcementBar.offsetHeight : 0;
+                const scrollTop = window.scrollY;
+
+                if (scrollTop > announcementBarHeight) {
+                    navBar.style.top = "0";
+                } else {
+                    navBar.style.top = `${announcementBarHeight - scrollTop}px`;
+                }
+            };
+
+            
+            updateNavPosition();
+
+            
+            window.addEventListener("scroll", updateNavPosition);
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+
+
+            closeMobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+    </script>
+</body>
+</html>

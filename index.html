@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLACÉ | Luxury Beauty & Cosmetics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@200;300;400;500;600&family=Cormorant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        .font-italiana { font-family: 'Italiana', serif; }
+        .font-cormorant { font-family: 'Cormorant', serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        
+        .gradient-overlay {
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+
+        .custom-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        </style>
+</head>
+
+<body class="bg-[#FDFBF9] custom-scroll">
+    <!-- Announcement Bar -->
+    <div class="bg-black text-white py-2 text-center font-montserrat text-xs tracking-wider">
+        Free shipping on orders over $75 | Complimentary samples with every order
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-12">
+                    <a href="/" class="text-3xl font-italiana tracking-wider">GLACÉ</a>
+                    <div class="hidden lg:flex items-center space-x-8 font-montserrat text-xs tracking-wider">
+                        <div class="hidden lg:flex items-center space-x-8 font-montserrat text-xs tracking-wider">
+                            <a href="products.html?type=all" class="text-gray-700 hover:text-black transition-colors duration-300">SHOP</a>
+                            <a href="products.html?type=new" class="text-gray-700 hover:text-black transition-colors duration-300">NEW</a>
+                            <a href="products.html?type=bestsellers" class="text-gray-700 hover:text-black transition-colors duration-300">BESTSELLERS</a>
+                            <a href="collections.html" class="text-gray-700 hover:text-black transition-colors duration-300">COLLECTIONS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="products.html" class="text-gray-700 hover:text-black transition-colors duration-300">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="profile.html" class="text-gray-700 hover:text-black transition-colors duration-300">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="text-gray-700 hover:text-black transition-colors duration-300">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 h-full z-50 right-0">
+            <div class="flex flex-col items-end h-full">
+                <button id="close-mobile-menu" class="absolute top-6 right-6 text-gray-700">
+                    <i class="fas fa-times fa-2x"></i>
+                </button>
+                <div class="w-full flex flex-col items-end px-6 py-12 space-y-4 bg-white">
+                    <a href="products.html?type=all" class="mt-2 block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">SHOP</a>
+                    <a href="products.html?type=new" class="block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">NEW</a>
+                    <a href="products.html?type=bestsellers" class="block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">BESTSELLERS</a>
+                    <a href="collections.html" class="block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">COLLECTIONS</a>
+                    <a href="profile.html" class="block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">PROFILE</a>
+                    <a href="cart.html" class="block py-2 text-xl font-montserrat text-gray-700 hover:text-black transition-colors duration-300 border-b border-transparent hover:border-gray-300">CART</a>
+                </div>
+            </div>
+        </div>
+    </nav>    
+
+        
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+        <div class="absolute inset-0">
+            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="assets/media/hero-section.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+        <div class="relative h-full flex items-center justify-center text-center px-4">
+            <div class="max-w-3xl" data-aos="fade-up" data-aos-delay="200">
+                <h1 class="text-4xl md:text-6xl font-italiana text-white mb-6 leading-tight">Own Your Beauty</h1>
+                <p class="text-base md:text-lg font-montserrat font-light text-white/90 mb-8 tracking-wide leading-relaxed">
+                    Professional-grade luxury cosmetics made for every skin type.
+                </p>
+
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="products.html"  class="inline-block bg-white text-gray-900 font-montserrat text-sm tracking-wider px-8 py-3 hover:bg-gray-100 transition-colors duration-300">
+                        SHOP NOW
+                    </a>
+                    <a href="collections.html" class="inline-block border-2 border-white text-white font-montserrat text-sm tracking-wider px-8 py-3 hover:bg-white hover:text-gray-900 transition-colors duration-300">
+                        VIEW COLLECTIONS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="font-italiana text-4xl mb-4">The Forever Collection</h2>
+            <p class="font-montserrat text-gray-600 text-sm tracking-wide">Effortless beauty for timeless beauty</p>
+        </div>
+
+        <div id="forever-products" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <!-- Products will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Editorial Section -->
+    <section class="relative bg-[#F4F1ED] overflow-hidden">
+        <div class="flex flex-col md:flex-row">
+            <!-- Image Section -->
+            <div class="w-full md:w-1/2 relative" data-aos="fade-right">
+                <img src="https://i0.wp.com/www.tantvstudios.com/wp-content/uploads/2024/07/free-photo-of-makeup-on-woman-face-scaled.jpeg?fit=2048%2C2560&ssl=1" 
+                    alt="Editorial" 
+                    class="w-full h-72 md:h-full object-cover">
+            </div>
+    
+            <!-- Text Section -->
+            <div class="w-full md:w-1/2 flex items-center justify-center p-6 md:p-20" data-aos="fade-left">
+                <div class="text-center md:text-left">
+                    <h2 class="font-italiana text-3xl md:text-4xl mb-6">The Art of Beauty</h2>
+                    <p class="font-montserrat text-gray-600 leading-relaxed mb-8">
+                        Discover our philosophy of mindful beauty, where luxury meets sustainability. Each product is thoughtfully crafted to enhance your natural radiance.
+                    </p>
+                    <a href="#" class="inline-block border border-black text-black font-montserrat text-sm tracking-wider px-8 py-3 hover:bg-black hover:text-white transition-all duration-300">
+                        EXPLORE MORE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Grid -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="text-center" data-aos="fade-up">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#F4F1ED] flex items-center justify-center">
+                    <i class="fas fa-leaf text-2xl"></i>
+                </div>
+                    <h3 class="font-cormorant text-xl mb-4">Clean Beauty</h3>
+                    <p class="font-montserrat text-sm text-gray-600 leading-relaxed">
+                        Formulated without harmful ingredients, always cruelty-free
+                    </p>
+            </div>
+
+            <div class="text-center" data-aos="fade-up">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#F4F1ED] flex items-center justify-center">
+                    <i class="fas fa-seedling text-2xl"></i>
+                </div>
+                <h3 class="font-cormorant text-xl mb-4">Natural Ingredients</h3>
+                <p class="font-montserrat text-sm text-gray-600 leading-relaxed">
+                    Sourced from the finest botanicals and minerals
+                </p>
+            </div>
+                
+            <div class="text-center" data-aos="fade-up">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#F4F1ED] flex items-center justify-center">
+                    <i class="fas fa-recycle text-2xl"></i>
+                </div>
+                <h3 class="font-cormorant text-xl mb-4">Sustainable Packaging</h3>
+                
+                <p class="font-montserrat text-sm text-gray-600 leading-relaxed">
+                    Recyclable and eco-friendly materials
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-[#F4F1ED]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-italiana text-4xl mb-4">What Our Customers Say</h2>
+                <p class="font-montserrat text-gray-600 text-sm tracking-wide">Real experiences from our beauty community</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <img src="/assets/media/Sarah Johnson.jpg" alt="Customer" class="w-14 h-14 rounded-full object-cover border-2 border-[#F4F1ED]">
+                        <div class="ml-4">
+                            <h4 class="font-cormorant text-xl">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="font-montserrat text-gray-600 text-sm leading-relaxed">"The best foundation I've ever used. Perfect for my sensitive skin and provides such a natural, luminous finish. I'm never going back to my old products!"</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <img src="/assets/media/Emily Chen.jpg" alt="Customer" class="w-14 h-14 rounded-full object-cover border-2 border-[#F4F1ED]">
+                        <div class="ml-4">
+                            <h4 class="font-cormorant text-xl">Emily Chen</h4>
+                            <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="font-montserrat text-gray-600 text-sm leading-relaxed">"GLACÉ's attention to detail and clean ingredients have completely transformed my skincare routine. The results are amazing and I love their commitment to sustainability."</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-6">
+                        <img src="/assets/media/Michelle Torres.jpg" alt="Customer" class="w-14 h-14 rounded-full object-cover border-2 border-[#F4F1ED]">
+                        <div class="ml-4">
+                            <h4 class="font-cormorant text-xl">Michelle Torres</h4>
+                            <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="font-montserrat text-gray-600 text-sm leading-relaxed">"Finally found products that match my skin tone perfectly! The customer service is exceptional, and the packaging is absolutely luxurious. Worth every penny!"</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="/reviews" class="inline-block border border-black text-black font-montserrat text-sm tracking-wider px-12 py-4 hover:bg-black hover:text-white transition-all duration-300">
+                    READ MORE REVIEWS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center font-italiana text-4xl mb-12">Follow Us @GLACÉ</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Instagram Posts -->
+                    <a href="#" class="group relative overflow-hidden">
+                    <img src="assets/media/insta1.jpg" alt="Behind the scenes makeup" class="w-full h-80 object-cover hover-scale">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white flex items-center space-x-4">
+                            <span class="flex items-center"><i class="fas fa-heart mr-2"></i>2.4k</span>
+                            <span class="flex items-center"><i class="fas fa-comment mr-2"></i>142</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="group relative overflow-hidden">
+                        <img src="assets/media/insta2.jpg" alt="Product flatlay" class="w-full h-80 object-cover hover-scale">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white flex items-center space-x-4">
+                            <span class="flex items-center"><i class="fas fa-heart mr-2"></i>3.1k</span>
+                            <span class="flex items-center"><i class="fas fa-comment mr-2"></i>198</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="group relative overflow-hidden">
+                    <img src="assets/media/insta3.jpg" alt="Makeup tutorial" class="w-full h-80 object-cover hover-scale">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white flex items-center space-x-4">
+                            <span class="flex items-center"><i class="fas fa-heart mr-2"></i>3.1k</span>
+                            <span class="flex items-center"><i class="fas fa-comment mr-2"></i>198</span>
+                        </div>
+                    </div>
+                </a>
+
+                    <a href="#" class="group relative overflow-hidden">
+                    <img src="assets/media/insta4.jpg" alt="Beauty essentials" class="w-full h-80 object-cover hover-scale">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-white flex items-center space-x-4">
+                                <span class="flex items-center"><i class="fas fa-heart mr-2"></i>3.1k</span>
+                                <span class="flex items-center"><i class="fas fa-comment mr-2"></i>198</span>
+                            </div>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center mt-10">
+                <a href="https://instagram.com" class="inline-block border border-black text-black font-montserrat text-sm tracking-wider px-12 py-4 hover:bg-black hover:text-white transition-all duration-300">
+                    FOLLOW ON INSTAGRAM
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="font-italiana text-2xl mb-6">GLACÉ</h3>
+                <p class="font-montserrat text-sm text-gray-400">
+                    Luxury beauty for the modern woman
+                </p>
+            </div>
+            <!-- Quick Links Column -->
+            <div>
+                <h4 class="font-montserrat font-bold text-lg mb-4">Quick Links</h4>
+                <ul class="font-montserrat text-sm text-gray-400 space-y-2">
+                    <li><a href="products.html" class="hover:text-white">Shop</a></li>
+                    <li><a href="about-us.html" class="hover:text-white">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Customer Care Column -->
+            <div>
+                <h4 class="font-montserrat font-bold text-lg mb-4">Customer Care</h4>
+                <ul class="font-montserrat text-sm text-gray-400 space-y-2">
+                    <li><a href="shipping-returns.html" class="hover:text-white">Shipping & Returns</a></li>
+                    <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="tos.html" class="hover:text-white">Terms of Service</a></li>
+                </ul>
+            </div>
+            <!-- Stay Connected Column -->
+            <div>
+                <h4 class="font-montserrat font-bold text-lg mb-4">Stay Connected</h4>
+                <p class="font-montserrat text-sm text-gray-400 mb-4">
+                    Sign up for exclusive offers and the latest beauty news
+                </p>
+                <div class="flex flex-col space-y-4 mb-4">
+                    <input type="email" placeholder="Your email" class="bg-gray-800 text-white p-2 rounded focus:outline-none focus:ring focus:border-white focus:ring-opacity-50">
+                    <button class="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-100">Subscribe</button>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-gray-800">
+            <p class="font-montserrat text-xs text-gray-400 text-center">
+                © 2025 GLACÉ. All rights reserved.
+                <br>
+                Disclaimer:
+                This website is for educational purposes only. GLACÉ is a fictitious business. This means that all product names, descriptions and images used on this website are fictitious or adapted from external sources for simulated business situations. All images and content not created by the team remain the property of their respective owners.
+            </p>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const announcementBar = document.querySelector(".bg-black.text-white.py-2");
+            const navBar = document.querySelector("nav");
+
+            const updateNavPosition = () => {
+                const announcementBarHeight = announcementBar ? announcementBar.offsetHeight : 0;
+                const scrollTop = window.scrollY;
+
+                if (scrollTop > announcementBarHeight) {
+                    navBar.style.top = "0";
+                } else {
+                    navBar.style.top = `${announcementBarHeight - scrollTop}px`;
+                }
+            };
+
+            
+            updateNavPosition();
+
+            
+            window.addEventListener("scroll", updateNavPosition);
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+
+
+            closeMobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+
+        const foreverProductIds = [1, 2, 5];
+
+        function loadCollectionProducts() {
+            const foreverContainer = document.getElementById('forever-products');
+            
+            const foreverProducts = products.filter(p => foreverProductIds.includes(p.id));            
+            foreverContainer.innerHTML = loadProducts(foreverProducts);            
+        }
+        loadCollectionProducts();
+    </script>
+</body>
+</html>
